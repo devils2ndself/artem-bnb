@@ -1,0 +1,17 @@
+{
+  "name": "assignment-1",
+  "version": "1.0.0",
+  "description": "Artem Tanyhin's Assignment 1 for WEB322",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Tanyhin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "handlebars": "^4.7.6"
+  }
+}

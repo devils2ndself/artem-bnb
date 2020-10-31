@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Register - ArtemBnB</title>
+    {{> head}}
+  </head>
+    <body>
+    {{> header}}
+    {{> nav}}
+    <main>
+        <h2>Sign up for free to get access to all these beautiful rooms at /rooms!</h2>
+        <form action="/register" method="POST">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username"/>
+            <label for="name">Real Name</label>
+            <input id="name" type="text" name="name" placeholder="First Middle Last"/>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="ex: abc@artembnb.com"/>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Create Password"/>
+            <div class="buttons">
+              <input type="reset" value="Clear Form">
+              <input type="submit" value="Register">
+            </div>
+        </form>
+        {{#if data}}<p class="errors">{{data.errors}}</p>{{/if}}
+    </main>
+    {{> footer}}
+    </body>
+</html>

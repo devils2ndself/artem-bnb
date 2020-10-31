@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home page - ArtemBnB</title>
+    {{> head}}
+  </head>
+    <body>
+    {{> header}}
+    {{> nav}}
+    <main>
+        <h2>Book unique places to stay and things to do.</h2>
+        <form action="/find" method="POST" class="homepage">
+            <label for="city">Choose one of these cities</label>
+            <select name="city" id="city">
+              <option value="Toronto">Toronto</option>
+              <option value="Montreal">Montreal</option>
+              <option value="Ottawa">Ottawa</option>
+              <option value="Winnipeg">Winnipeg</option>
+            </select>
+            <div class="checkin">
+              <label for="checkin">Check-In</label>
+              <input id="checkin" type="date" name="checkin">
+            </div>
+            <div class="checkout">
+              <label for="checkout">Check-Out</label>
+              <input id="checkout" type="date" name="checkout">
+            </div>
+            <div class="guests">
+              <label for="guests">No. of Guests</label>
+              <input id="guests" type="number" name="guests" value="1">
+            </div>
+            <div class="buttons">
+              <input type="reset" value="Reset">
+              <input type="submit" value="Find">
+            </div>
+        </form>
+        <hr>
+        <section>
+          <h2>Book any (of the 6 available) rooms anywhere (from 4 cities) in the world.</h2>
+          <p>ArtemBnB is the tool for you to get accomodation anywhere for an affordable price. Or not. Look through our options in the Rooms menu available at the top.</p>
+        </section>
+        <hr>
+        <section>
+          <h2>So why is ArtemBnB for you?</h2>
+          <p>ArtemBnB is perfect for people who want to save their money while also enjoting their time traveling.</p> 
+          <p>I bet anyone would love to have affordable accomodation whilst they are in a different country and/or city, so we offer a variety of rooms (well, six, but are planning on growing!) for you to consider.</p>
+          <p>So, while you check out our rooms, you should also check out this good music clip I have found on the Internet!</p>
+          <iframe width="720" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+    </main>
+    {{> footer}}
+    </body>
+</html>

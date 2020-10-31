@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Login - ArtemBnB</title>
+    {{> head}}
+  </head>
+    <body>
+    {{> header}}
+    {{> nav}}
+    <main>
+        <h2>Login to ArtemBnb</h2>
+        <form action="/login" method="POST">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username"/>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Create Password"/>
+            <div class="buttons">
+              <input type="submit" value="Login">
+            </div>
+        </form>
+        {{#if data}}<p class="errors">{{data.errors}}</p>{{/if}}
+    </main>
+    {{> footer}}
+    </body>
+</html>

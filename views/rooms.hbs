@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home page - ArtemBnB</title>
+    {{> head}}
+  </head>
+    <body>
+    {{> header}}
+    {{> nav}}
+    <main>
+        <h2>Our Rooms.</h2>
+        {{#if data}}
+        <p>We weren't able to find {{data.city}} rooms, but here are some that you might like!</p>
+        {{/if}}
+        <div id="rooms">
+            <div class="room">
+                <img src="images/room1.jpg" alt="room1" width="100%">
+                <p>Simple black'n'white room - 1 bed</p>
+                <p>Cost - $10/day</p>
+            </div>
+            <div class="room">
+                <img src="images/room2.jpg" alt="room2" width="100%">
+                <p>Big room with TV - 1 couch</p>
+                <p>Cost - $12/day</p>
+            </div>
+            <div class="room">
+                <img src="images/room3.jpg" alt="room3" width="100%">
+                <p>Cartooney room - 1 couch</p>
+                <p>Cost - $15/day</p>
+            </div>
+            <div class="room">
+                <img src="images/room4.jpg" alt="room4" width="100%">
+                <p>Comfy room - 1 bed</p>
+                <p>Cost - $25/day</p>
+            </div>
+            <div class="room">
+                <img src="images/room5.jpg" alt="room5" width="100%">
+                <p>Messy but big room in downtown - 1 bed</p>
+                <p>Cost - $30/day</p>
+            </div>
+            <div class="room">
+                <img src="images/room6.png" alt="room6" width="100%">
+                <p>Sakura style - 1 bed</p>
+                <p>Cost - $28/day</p>
+            </div>
+        </div>
+    </main>
+    {{> footer}}
+    </body>
+</html>
