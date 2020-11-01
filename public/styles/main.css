@@ -119,9 +119,13 @@ form.homepage {
 }
 
 form label {
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: left;
     padding-left: 1em;
+}
+
+form.homepage label {
+    font-size: 1.1em;
 }
 
 input, textarea, select {
