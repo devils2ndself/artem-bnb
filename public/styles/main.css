@@ -111,6 +111,10 @@ main {
     border-radius: .8em;
 }
 
+main p {
+    font-size: .9em;
+}
+
 hr {
     border-color: #888888;
     margin-top: 2em;
