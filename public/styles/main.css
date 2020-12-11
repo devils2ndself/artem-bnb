@@ -59,6 +59,12 @@ header img {
     color: #BBFFBB;
 }
 
+.topnav a.logout {
+    float: right;
+    margin-left: 2em;
+    color: #ffbbbb;
+}
+
 .topnav a:hover {
     background-color: #ddd;
     color: black;
@@ -81,6 +87,10 @@ main .outer {
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+}
+
+main a {
+    color: seashell;
 }
 
 main .container {
@@ -177,6 +187,13 @@ form.homepage input[type="date"] {
     float: right;
 }
 
+form input[type="file"] {
+    width: 60%;
+    float: right;
+    padding-left: .5em;
+    background-color: #1E1E1F;
+}
+
 .guests label {
     float: left;
 }
@@ -237,7 +254,7 @@ input[type="reset"]:focus {
     grid-gap: 20px;
 }
 
-.room img {
+.room img, img.room {
     border: 3px solid #494949;
     border-radius: .3em;
 }

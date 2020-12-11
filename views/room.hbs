@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{room.title}} - ArtemBnB</title>
+    {{> head}}
+    <script type="text/javascript">
+        function GetDays() {
+            let checkin = new Date(document.getElementById("checkin").value);
+            let checkout = new Date(document.getElementById("checkout").value);
+            return (parseInt((checkout - checkin) / (24 * 3600 * 1000)) + 1);
+        }
+
+        function res() {
+            document.getElementById("days").value = 1; 
+            document.getElementById("dayNum").innerHTML = 1; 
+            document.getElementById("amount").value = {{room.price}}; 
+            document.getElementById("total").innerHTML = {{room.price}};
+        }
+
+        function cal() {
+          let days = GetDays();
+          let total = GetDays() * {{room.price}};
+
+          if (GetDays() >= 0) {document.getElementById("days").value = days; document.getElementById("dayNum").innerHTML = days; }
+          else { document.getElementById("days").value = 0; document.getElementById("dayNum").innerHTML = 0; }
+          if (total >= 0) { document.getElementById("amount").value = total; document.getElementById("total").innerHTML = total;}
+          else { document.getElementById("amount").value = 0; document.getElementById("total").innerHTML = 0; }
+        }  
+    </script>
+  </head>
+    <body>
+    {{> header}}
+    {{> nav}}
+    <main>
+        <h2>{{room.title}} in {{room.location}}</h2>
+        <p><img class="room" src="images/{{room.photoFile}}" alt="{{title}}" width="50%"></p>
+        <p>Description: {{room.description}}</p>
+        <p>Price per night: ${{room.price}}</p>
+        <form action="/book" method="POST" class="homepage">
+            <div class="checkin">
+              <label for="checkin">Check-In</label>
+              <input id="checkin" type="date" name="checkin"  value="2020-12-31" onchange="cal()">
+            </div>
+            <div class="checkout">
+              <label for="checkout">Check-Out</label>
+              <input id="checkout" type="date" name="checkout" value="2020-12-31" onchange="cal()">
+            </div>
+            <input type="hidden" name="id" value="{{room.id}}">
+            <input type="hidden" name="days" id="days" value="1">
+            <input type="hidden" name="amount" id="amount" value="{{room.price}}">
+            <div>
+              <p>Price: {{room.price}} * <span id="dayNum">1</span> = <span id="total">{{room.price}}</span></p>
+            </div>
+            <div>
+              <input type="reset" value="Reset" onclick="res()">
+              <input type="submit" value="Book">
+            </div>
+        </form>
+    </main>
+    {{> footer}}
+    </body>
+</html>

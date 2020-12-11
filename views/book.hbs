@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{room.title}} - ArtemBnB</title>
+    {{> head}}
+    <script type="text/javascript">
+        function GetDays(){
+            let checkin = new Date(document.getElementById("checkin").value);
+            let checkout = new Date(document.getElementById("checkout").value);
+            return (parseInt((checkout - checkin) / (24 * 3600 * 1000)) + 1);
+        }
+
+        function cal(){
+          let days = GetDays();
+          let total = GetDays() * {{room.price}};
+
+          if (GetDays() >= 0) {document.getElementById("days").value = days; document.getElementById("dayNum").innerHTML = days; }
+          else { document.getElementById("days").value = 0; document.getElementById("dayNum").innerHTML = 0; }
+          if (total >= 0) { document.getElementById("amount").value = total; document.getElementById("total").innerHTML = total;}
+          else { document.getElementById("amount").value = 0; document.getElementById("total").innerHTML = 0; }
+        }  
+    </script>
+  </head>
+    <body>
+    {{> header}}
+    {{> nav}}
+    <main>
+        <h2>Your booking</h2>
+        <p>Room Title: {{room.title}}</p>
+        <p>Location: {{room.location}}</p>
+        <p>Price per day: {{room.price}}</p>
+        <p>Number of days: {{days}}</p>
+        <p>Check-in Date: {{checkin}}</p>
+        <p>Check-out Date: {{checkout}}</p>
+        <p>Total: {{amount}}</p>
+    </main>
+    {{> footer}}
+    </body>
+</html>

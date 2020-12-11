@@ -2,5 +2,7 @@
     <a href="/">Home</a>
     <a href="/rooms">Rooms</a>
     <a href="/register">User Registration</a>
-    <a href="/login" class="login">Login</a>
+    {{#if user.email}} <a href="/dashboard">Dashboard</a> {{/if}}
+    {{#if user.admin}} <a href="/admin-dashboard">Admin Dashboard</a> {{/if}}
+    <a href="/login" {{#unless user.email}}class="login">Login{{else}}class="logout">Log out{{/unless}}</a>
 </div>

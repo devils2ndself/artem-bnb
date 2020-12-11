@@ -10,15 +10,15 @@
     <main>
         <h2>Login to ArtemBnb</h2>
         <form action="/login" method="POST">
-            <label for="username">Username</label>
-            <input id="username" type="text" name="username" placeholder="Username">
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email" placeholder="example@artembnb.com">
             <label for="password">Password</label>
             <input id="password" type="password" name="password" placeholder="Your Password">
             <div class="buttons">
               <input type="submit" value="Login">
             </div>
         </form>
-        {{#if data}}<p class="errors">{{data.errors}}</p>{{/if}}
+        {{#if message}}<p class="errors">{{message}}</p>{{/if}}
     </main>
     {{> footer}}
     </body>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Admin Dashboard - {{user.username}} - ArtemBnB</title>
+    {{> head}}
+  </head>
+    <body>
+    {{> header}}
+    {{> nav}}
+    <main>
+        <h2>Hello, admin {{user.name}}!</h2>
+        <h3>Use below form to add a room</h3>
+        <form action="/addroom" method="POST" enctype="multipart/form-data">
+          <label for="title">Title</label>
+          <input id="title" type="text" name="title" required/>
+          <label for="price">Price</label>
+          <input id="price" type="number" name="price" required/>
+          <label for="location">Location</label>
+          <input id="location" type="text" name="location" required/>
+          <label for="description">Description</label>
+          <input id="description" type="text" name="description" required/>
+          <label for="photo">Photo of the Room</label>
+          <div><input id="photo" type="file" name="photo" required/></div>
+          <div class="buttons">
+            <input type="submit" value="Create Room" />
+          </div>  
+        </form>
+        {{#if message}}<p class="errors">{{message}}</p>{{/if}}
+    </main>
+    {{> footer}}
+    </body>
+</html>
