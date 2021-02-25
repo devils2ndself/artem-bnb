@@ -19,7 +19,7 @@ header {
     padding-left: 2em;
     padding-top: 1em;
     padding-bottom: 2em;
-    background-color: #242525;
+    background-color: #252525;
 }
 
 header h1, header p {
@@ -41,7 +41,7 @@ header img {
     padding-left: 2em;
     padding-right: 3em;
     overflow: hidden;
-    background-color: #1b1b1b;
+    background-color: #1d1d1d;
   }
   
 .topnav a {
@@ -262,7 +262,7 @@ input[type="reset"]:focus {
     margin-top: 2em;
     padding: 0 1em;
     text-align: center;
-    background-color: #1E1E1F;
+    background-color: #1b1b1b;
     overflow: hidden;
     font-size: .85em;
     margin-bottom: 0;
