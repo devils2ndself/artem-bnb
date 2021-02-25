@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-color: #37363a;
+    background-color: #2e2e2e;
     color: seashell;
     font-family: "Lato", sans-serif;
     font-size: 1.2em;
@@ -19,7 +19,7 @@ header {
     padding-left: 2em;
     padding-top: 1em;
     padding-bottom: 2em;
-    background-color: #272729;
+    background-color: #242525;
 }
 
 header h1, header p {
@@ -41,7 +41,7 @@ header img {
     padding-left: 2em;
     padding-right: 3em;
     overflow: hidden;
-    background-color: #1E1E1F;
+    background-color: #1b1b1b;
   }
   
 .topnav a {
@@ -116,7 +116,6 @@ main {
     margin: 1em 1em 5em 1em;
     padding: 1em 1em;
     text-align: center;
-    background-color: #2e2e31;
     min-width: 450px;
     border-radius: .8em;
 }
