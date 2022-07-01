@@ -9,6 +9,8 @@ const clientSessions = require("client-sessions");
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
 
+require('dotenv').config();
+
 const storage = multer.diskStorage({
     destination: "./public/images/",
     filename: (req, file, cb) => {
@@ -17,8 +19,8 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage: storage});
 const app = express();
-const sequelize = new Sequelize('df30nrg82aucai', 'zfuzhemkqwhfrq', '97c4c6df73f90e51bb72980ee224c9cabb8aec996424952cd1bf25d235851316', {
-    host: 'ec2-18-233-207-22.compute-1.amazonaws.com',
+const sequelize = new Sequelize(process.env.DATABASE, process.env.DB_USER, process.env.DB_PASS, {
+    host: process.env.DB_HOST,
     dialect: 'postgres',
     port: 5432,
     dialectOptions: {
